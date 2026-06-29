@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="color-scheme" content="light only"/>
+<meta name="theme-color" content="
+#ffffff"/>
+<meta name="description" content="RYSM(리스마케팅) 팀 합류 지원. 글로벌 브랜드의 현장을 책임집니다."/>
+<meta property="og:title" content="RYSM 인재 채용"/>
+<meta property="og:description" content="글로벌 브랜드와 F2F 마케팅을 전문적으로 기획하고 설계합니다."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://raw.githubusercontent.com/befreeherekr/RYSM/main/og-image.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<link rel="preconnect" href="https://cdn.jsdelivr.net"/>
+<link rel="icon" href="https://raw.githubusercontent.com/befreeherekr/RYSM/main/og-image.jpg"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:url" content="https://rysm.one"/>
+<title>RYSM 인재 채용 </title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  
+/* 다크모드 완전 차단 */
+:root{color-scheme:light only;}
+html{background:#ffffff !important;}
+@media(prefers-color-scheme:dark){
+  html,body,section,footer,div,p,h1,h2,span{
+    background-color:unset;
+    color:unset;
+  }
+  html{background:#ffffff !important;}
+  body{background:#ffffff !important;color:#111111 !important;}
+}
+
+:root{
+  --bg:#ffffff;
+  --black:#111111;
+  --gray1:#555555;
+  --gray2:#888888;
+  --gray3:#BBBBBB;
+  --gray4:#F4F4F4;
+  --line:#EBEBEB;
+  --blue:#3182F6;
+  --blue-bg:#EFF6FF;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:#ffffff;
+  color:#111111;
+  max-width:480px;
+  margin:0 auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+
+/* ── FLOATING CTA ── */
+.floating-cta{
+  position:fixed;
+  bottom:24px;
+  left:50%;
+  transform:translateX(-50%);
+  width:calc(100% - 48px);
+  max-width:432px;
+  z-index:200;
+  transition:opacity 0.2s ease, visibility 0.2s ease;
+}
+.floating-cta.hidden{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+.floating-btn{
+  display:block;
+  width:100%;
+  background:var(--black);
+  color:#fff;
+  font-family:'Pretendard',-apple-system,sans-serif;
+  font-size:16px;
+  font-weight:700;
+  padding:18px;
+  border-radius:14px;
+  text-align:center;
+  text-decoration:none;
+  letter-spacing:-0.3px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.18);
+  transition:opacity 0.15s;
+  -webkit-tap-highlight-color:transparent;
+}
+.floating-btn:active{opacity:0.8;}
+
+/* ── HERO ── */
+.hero{
+  padding:72px 28px 80px;
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:#ffffff;
+}
+
+.hero-label{
+  font-size:13px;
+  font-weight:600;
+  color:var(--gray2);
+  letter-spacing:0.3px;
+  margin-bottom:24px;
+}
+
+.hero-headline{
+  font-size:40px;
+  font-weight:900;
+  line-height:1.15;
+  letter-spacing:-1.5px;
+  color:#111111;
+  margin-bottom:28px;
+}
+
+.hero-headline .blue{color:var(--blue);}
+
+.hero-sub{
+  font-size:16px;
+  font-weight:400;
+  color:var(--gray1);
+  line-height:1.7;
+  letter-spacing:-0.2px;
+}
+
+/* ── BLOCK SECTION ── */
+.block{
+  padding:72px 28px;
+  border-top:1px solid var(--line);
+  background:#ffffff;
+}
+
+.block-label{
+  font-size:13px;
+  font-weight:600;
+  color:var(--blue);
+  letter-spacing:0.2px;
+  margin-bottom:16px;
+}
+
+.block-title{
+  font-size:28px;
+  font-weight:800;
+  line-height:1.25;
+  letter-spacing:-0.8px;
+  color:#111111;
+  margin-bottom:16px;
+}
+
+.block-body{
+  font-size:15px;
+  font-weight:400;
+  color:var(--gray1);
+  line-height:1.75;
+  letter-spacing:-0.2px;
+}
+
+/* ── BIG STATEMENT ── */
+.statement{
+  padding:80px 28px;
+  border-top:1px solid var(--line);
+  background:#ffffff;
+}
+
+.statement-text{
+  font-size:32px;
+  font-weight:900;
+  line-height:1.2;
+  letter-spacing:-1px;
+  color:#111111;
+}
+
+.statement-text em{
+  font-style:normal;
+  color:var(--blue);
+}
+
+/* ── PILL LIST ── */
+.pill-list{
+  margin-top:32px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.pill-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:18px 20px;
+  background:var(--gray4);
+  border-radius:14px;
+}
+
+.pill-icon{
+  font-size:20px;
+  line-height:1;
+  flex-shrink:0;
+}
+
+.pill-text{
+  font-size:15px;
+  font-weight:600;
+  color:#111111;
+  letter-spacing:-0.3px;
+  line-height:1.4;
+}
+
+.pill-sub{
+  font-size:13px;
+  font-weight:400;
+  color:var(--gray2);
+  margin-top:3px;
+  line-height:1.5;
+}
+
+/* ── NUMBERS ── */
+.numbers{
+  padding:72px 28px;
+  border-top:1px solid var(--line);
+  background:#ffffff;
+}
+
+.num-grid{
+  margin-top:36px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px 20px;
+}
+
+.num-value{
+  font-size:34px;
+  font-weight:900;
+  letter-spacing:-1.5px;
+  color:#111111;
+  line-height:1;
+  margin-bottom:8px;
+}
+
+.num-desc{
+  font-size:13px;
+  font-weight:500;
+  color:var(--gray2);
+  line-height:1.5;
+  letter-spacing:-0.2px;
+}
+
+/* ── PATH ── */
+.path{
+  padding:72px 0 72px;
+  border-top:1px solid var(--line);
+  background:#ffffff;
+}
+
+.path-header{
+  padding:0 28px;
+  margin-bottom:36px;
+}
+
+.path-scroll-wrap{
+  overflow:hidden;
+  position:relative;
+  padding:4px 28px 20px;
+}
+
+.path-cards{
+  display:flex;
+  gap:12px;
+  transition:transform 0.35s ease;
+  will-change:transform;
+  cursor:grab;
+  user-select:none;
+}
+
+.path-cards.grabbing{
+  cursor:grabbing;
+}
+
+/* 인디케이터 */
+.path-indicators{
+  display:flex;
+  justify-content:center;
+  gap:6px;
+  margin-top:16px;
+}
+
+.path-dot-ind{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--line);
+  transition:background 0.25s, width 0.25s;
+}
+
+.path-dot-ind.active{
+  background:#111111;
+  width:18px;
+  border-radius:3px;
+}
+
+.path-card{
+  width:180px;
+  flex-shrink:0;
+  background:var(--gray4);
+  border-radius:16px;
+  padding:20px 18px 22px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.path-card-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#111111;
+  color:#fff;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:0.3px;
+  padding:4px 10px;
+  border-radius:20px;
+  align-self:flex-start;
+}
+
+.path-card-role{
+  font-size:20px;
+  font-weight:900;
+  color:#111111;
+  letter-spacing:-0.5px;
+  line-height:1;
+}
+
+.path-card-desc{
+  font-size:13px;
+  color:var(--gray2);
+  line-height:1.65;
+  letter-spacing:-0.2px;
+}
+
+.desc-gap{
+  display:block;
+  height:0.5px;
+}
+
+/* 비공개 카드 */
+.path-card.locked{
+  background:var(--gray4);
+  border:1.5px dashed var(--line);
+  position:relative;
+}
+
+.path-card-badge.locked-badge{
+  background:var(--gray3);
+  color:#fff;
+}
+
+.path-card-role.locked-role{
+  color:#111111;
+}
+
+.path-card-blur{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  margin-top:2px;
+}
+
+.blur-line{
+  height:11px;
+  border-radius:5px;
+  background:#DDDDDD;
+  filter:blur(3px);
+}
+
+.blur-line.w80{width:80%;}
+.blur-line.w60{width:60%;}
+.blur-line.w90{width:90%;}
+
+.path-card-lock-hint{
+  font-size:11px;
+  font-weight:600;
+  color:var(--gray3);
+  letter-spacing:0.1px;
+  margin-top:auto;
+  padding-top:8px;
+}
+
+.path-unlock-hint{
+  font-size:13px;
+  color:var(--gray2);
+  margin:20px 28px 0;
+  padding:14px 16px;
+  background:var(--gray4);
+  border-radius:10px;
+  line-height:1.6;
+  letter-spacing:-0.2px;
+}
+
+/* ── TEAM ── */
+.team{
+  padding:72px 28px;
+  border-top:1px solid var(--line);
+  background:#ffffff;
+}
+
+.team-list{
+  margin-top:36px;
+  display:flex;
+  flex-direction:column;
+}
+
+.team-row{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  padding:20px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.team-row:last-child{border-bottom:none;}
+
+.team-init{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:var(--gray4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:800;
+  color:#111111;
+  flex-shrink:0;
+  letter-spacing:-0.3px;
+}
+
+.team-badge{
+  display:inline-block;
+  background:var(--blue-bg);
+  color:var(--blue);
+  font-size:11px;
+  font-weight:700;
+  padding:2px 8px;
+  border-radius:5px;
+  margin-bottom:5px;
+  letter-spacing:0.2px;
+}
+
+.team-name-text{
+  font-size:15px;
+  font-weight:700;
+  color:#111111;
+  letter-spacing:-0.2px;
+  margin-bottom:4px;
+}
+
+.team-achieve-text{
+  font-size:13px;
+  color:var(--gray2);
+  line-height:1.65;
+}
+
+.team-more{
+  margin-top:28px;
+  font-size:14px;
+  font-weight:500;
+  color:var(--gray2);
+  line-height:1.7;
+  letter-spacing:-0.2px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+}
+
+/* ── WHO ── */
+.who{
+  padding:72px 28px;
+  border-top:1px solid var(--line);
+  background:var(--gray4);
+}
+
+.who-title{
+  font-size:28px;
+  font-weight:800;
+  line-height:1.25;
+  letter-spacing:-0.8px;
+  color:#111111;
+  margin-bottom:32px;
+}
+
+.who-group-label{
+  font-size:12px;
+  font-weight:600;
+  color:var(--gray3);
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
+.who-items{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-bottom:32px;
+}
+
+.who-items:last-child{margin-bottom:0;}
+
+.who-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:15px;
+  font-weight:500;
+  color:#111111;
+  letter-spacing:-0.2px;
+}
+
+.who-row.no{color:var(--gray2);}
+
+.who-dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#111111;
+  flex-shrink:0;
+}
+
+.who-row.no .who-dot{background:var(--gray3);}
+
+/* ── APPLY ── */
+.apply{
+  padding:72px 28px 120px;
+  border-top:1px solid var(--line);
+  background:#ffffff;
+}
+
+.apply-title{
+  font-size:28px;
+  font-weight:800;
+  line-height:1.25;
+  letter-spacing:-0.8px;
+  color:#111111;
+  margin-bottom:10px;
+}
+
+.apply-sub{
+  font-size:15px;
+  color:var(--gray1);
+  line-height:1.7;
+  margin-bottom:36px;
+}
+
+.form-field{margin-bottom:16px;}
+
+.form-label-text{
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  color:var(--gray2);
+  margin-bottom:8px;
+  letter-spacing:-0.1px;
+}
+
+.form-input,.form-textarea{
+  width:100%;
+  background:var(--gray4);
+  border:2px solid transparent;
+  border-radius:12px;
+  font-family:'Pretendard',-apple-system,sans-serif;
+  font-size:15px;
+  font-weight:500;
+  color:#111111;
+  padding:16px 18px;
+  outline:none;
+  -webkit-appearance:none;
+  transition:border-color 0.15s, background 0.15s;
+}
+
+.form-input:focus,.form-textarea:focus{
+  background:#ffffff;
+  border-color:var(--blue);
+}
+
+.form-input::placeholder,.form-textarea::placeholder{color:var(--gray3);}
+
+.form-textarea{
+  resize:none;
+  height:120px;
+  line-height:1.65;
+}
+
+.form-submit{
+  width:100%;
+  background:#111111;
+  color:#fff;
+  border:none;
+  border-radius:14px;
+  font-family:'Pretendard',-apple-system,sans-serif;
+  font-size:16px;
+  font-weight:700;
+  padding:20px;
+  cursor:pointer;
+  letter-spacing:-0.3px;
+  margin-top:8px;
+  transition:opacity 0.15s;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.form-submit:active{opacity:0.8;}
+.form-submit:disabled{opacity:0.4;cursor:default;}
+
+.form-note-text{
+  font-size:13px;
+  color:var(--gray3);
+  text-align:center;
+  margin-top:14px;
+  line-height:1.6;
+}
+
+/* Success */
+.success-box{
+  display:none;
+  text-align:center;
+  padding:48px 0;
+}
+.success-box.show{display:block;}
+
+.success-circle{
+  width:64px;
+  height:64px;
+  background:var(--gray4);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  margin:0 auto 20px;
+}
+
+.success-title-text{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-0.5px;
+  color:#111111;
+  margin-bottom:8px;
+}
+
+.success-desc-text{
+  font-size:14px;
+  color:var(--gray2);
+  line-height:1.7;
+}
+
+/* ── FOOTER ── */
+footer{
+  padding:32px 28px 48px;
+  border-top:1px solid var(--line);
+  background:#ffffff;
+}
+
+.footer-logo-text{
+  font-size:15px;
+  font-weight:800;
+  color:#111111;
+  letter-spacing:-0.3px;
+  margin-bottom:12px;
+}
+
+.footer-info{
+  font-size:12px;
+  color:var(--gray3);
+  line-height:2;
+}
+
+.footer-info a{
+  color:var(--gray3);
+  text-decoration:none;
+}
+
+.footer-info a:active{color:var(--gray2);}
+
+/* ── REVEAL ── */
+.reveal{
+  opacity:0;
+  transform:translateY(16px);
+  transition:opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.on{
+  opacity:1;
+  transform:translateY(0);
+}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- FLOATING CTA -->
+<div class="floating-cta" id="floatingCta">
+  <a class="floating-btn" href="#apply">팀 합류 지원하기</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-label">RYSM · 리스마케팅</p>
+  <h1 class="hero-headline">글로벌 브랜드의<br><span class="blue">현장을</span> 책임집니다</h1>
+  <p class="hero-sub">RYSM은 글로벌 브랜드와 협업하여 마케팅 캠페인을 설계하고 실행합니다. 자체 데이터 기반으로 타겟 고객을 정교하게 설정하고, 현장에서 대면합니다.</p>
+</section>
+
+<!-- WHAT YOU DO -->
+<section class="block reveal">
+  <p class="block-label">하게 될 일</p>
+  <h2 class="block-title">F2F 마케팅.<br>모든 것을 배울 수 있습니다.</h2>
+  <div class="pill-list">
+    <div class="pill-item">
+      <div class="pill-icon">🎤</div>
+      <div>
+        <div class="pill-text">현장 이벤트 · 프로모션 부스</div>
+        <div class="pill-sub">실내외 이벤트 현장에서 직접 고객과 대면합니다</div>
+      </div>
+    </div>
+    <div class="pill-item">
+      <div class="pill-icon">🎯</div>
+      <div>
+        <div class="pill-text">맞춤 고객 타겟팅</div>
+        <div class="pill-sub">데이터 기반으로 브랜드의 핵심 고객을 찾아냅니다</div>
+      </div>
+    </div>
+    <div class="pill-item">
+      <div class="pill-icon">🌐</div>
+      <div>
+        <div class="pill-text">글로벌 브랜드 협업</div>
+        <div class="pill-sub">국내외 주요 브랜드들과 직접 일합니다</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIG STATEMENT -->
+<section class="statement reveal">
+  <p class="statement-text">필드를 누비며<br>에너지 넘치게 일하고,<br><em>결과는 정당하게</em><br>가져가세요.</p>
+</section>
+
+<!-- BENEFITS -->
+<section class="block reveal">
+  <p class="block-label">근무 환경</p>
+  <h2 class="block-title">당연한 것들을<br>당연하게</h2>
+  <div class="pill-list">
+    <div class="pill-item">
+      <div class="pill-icon">📆</div>
+      <div>
+        <div class="pill-text">유연한 근무 형태</div>
+        <div class="pill-sub">내 스케줄에 맞게. 강요 없이 자율적으로 운영합니다</div>
+      </div>
+    </div>
+    <div class="pill-item">
+      <div class="pill-icon">✈️</div>
+      <div>
+        <div class="pill-text">연 3–4회 해외연수</div>
+        <div class="pill-sub">한국에만 국한되지 않는, 세계와 함께합니다.</div>
+      </div>
+    </div>
+    <div class="pill-item">
+      <div class="pill-icon">🌏</div>
+      <div>
+        <div class="pill-text">해외 트립 기회</div>
+        <div class="pill-sub">글로벌 네트워크를 통한 다양한 트립 기회.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="numbers reveal">
+  <p class="block-label">Proof</p>
+  <div class="num-grid">
+    <div class="num-item">
+      <div class="num-value">Bold</div>
+      <div class="num-desc">확신이 있는<br>사람들</div>
+    </div>
+    <div class="num-item">
+      <div class="num-value">3–4회</div>
+      <div class="num-desc">연간<br>해외연수 기회</div>
+    </div>
+    <div class="num-item">
+      <div class="num-value">0</div>
+      <div class="num-desc">연차·학력·나이<br>제한 없음</div>
+    </div>
+    <div class="num-item">
+      <div class="num-value">Global</div>
+      <div class="num-desc">글로벌 브랜드와<br>직접 협업</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHO -->
+<section class="who reveal">
+  <h2 class="who-title"><em style="font-style:normal;color:var(--blue);">이런 사람</em>을<br>찾고 있습니다</h2>
+  <div class="who-items">
+    <div class="who-row"><div class="who-dot"></div>고객 응대에 거부감이 없는 사람</div>
+    <div class="who-row"><div class="who-dot"></div>사람 만나는 게 에너지가 되는 사람</div>
+    <div class="who-row"><div class="who-dot"></div>매사 긍정적이며 잘 웃는 사람</div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="apply reveal" id="apply">
+  <h2 class="apply-title">당신의 이야기를,<br>들려주세요.</h2>
+  <p class="apply-sub">함께 성장할 사람을 찾습니다.</p>
+
+  <form id="applyForm" novalidate>
+    <div class="form-field">
+      <label class="form-label-text" for="f-name">이름</label>
+      <input class="form-input" type="text" id="f-name" name="applicant_name" placeholder="홍길동" required autocomplete="name"/>
+    </div>
+    <div class="form-field">
+      <label class="form-label-text" for="f-phone">연락처</label>
+      <input class="form-input" type="tel" id="f-phone" name="applicant_phone" placeholder="010-0000-0000" required autocomplete="tel"/>
+    </div>
+    <div class="form-field">
+      <label class="form-label-text" for="f-age">나이 · 현재 상황</label>
+      <input class="form-input" type="text" id="f-age" name="applicant_age" placeholder="예) 24세 / 취준 중"/>
+    </div>
+    <div class="form-field">
+      <label class="form-label-text" for="f-msg">지원 동기 (자유롭게)</label>
+      <textarea class="form-textarea" id="f-msg" name="applicant_message" placeholder="지원하고 싶은 동기와 자신이 어떤 사람인지 적어주세요."></textarea>
+    </div>
+    <button class="form-submit" type="submit" id="submitBtn">지원서 보내기</button>
+    <p class="form-note-text">제출 후 1시간 이내, 직접 연락드립니다.</p>
+  </form>
+
+  <div class="success-box" id="successBox">
+    <div class="success-circle">✓</div>
+    <div class="success-title-text">지원서가 전달됐습니다</div>
+    <div class="success-desc-text">1시간 이내로 직접 연락드리겠습니다.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo-text">RYSM</div>
+  <div class="footer-info">
+    리스마케팅 · 글로벌 브랜드 마케팅 에이전시<br>
+    📍 서울특별시 영등포구 도영로 19 삼영빌딩 4층<br><br>
+    © 2026 RYSM. All rights reserved.
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('on');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  },{threshold:0.07});
+  revealEls.forEach(function(el){ revealObserver.observe(el); });
+
+  // Floating CTA — class 기반으로 토글 (CSS transition 활용)
+  const floatingCta = document.getElementById('floatingCta');
+  const applySection = document.getElementById('apply');
+  const applyObserver = new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting){
+      floatingCta.classList.add('hidden');
+    } else {
+      floatingCta.classList.remove('hidden');
+    }
+  },{threshold:0.1});
+  applyObserver.observe(applySection);
+
+  // ── CAROUSEL ──
+  (function(){
+    const wrap = document.querySelector('.path-scroll-wrap');
+    const track = document.querySelector('.path-cards');
+    const indWrap = document.getElementById('pathIndicators');
+    if(!track || !wrap) return;
+
+    const cards = track.querySelectorAll('.path-card');
+    const count = cards.length;
+    let current = 0;
+    let autoTimer = null;
+    let startX = 0, isDragging = false, dragDelta = 0;
+
+    // 인디케이터 생성
+    const dots = [];
+    cards.forEach(function(_,i){
+      const d = document.createElement('div');
+      d.className = 'path-dot-ind' + (i===0?' active':'');
+      d.addEventListener('click', function(){ goTo(i); stopAuto(); });
+      indWrap.appendChild(d);
+      dots.push(d);
+    });
+
+    function getCardWidth(){
+      return cards[0].getBoundingClientRect().width + 12;
+    }
+
+    let isBusy = false;
+
+    function goTo(idx){
+      current = Math.max(0, Math.min(idx, count-1));
+      track.style.transform = 'translateX(-' + (current * getCardWidth()) + 'px)';
+      dots.forEach(function(d,i){ d.classList.toggle('active', i===current); });
+    }
+
+    function next(){ goTo(current < count-1 ? current+1 : 0); }
+    function prev(){ goTo(current > 0 ? current-1 : count-1); }
+
+    function startAuto(){ autoTimer = setInterval(next, 1700); }
+    function resetAuto(){ clearInterval(autoTimer); startAuto(); }
+    function stopAuto(){ clearInterval(autoTimer); autoTimer = null; }
+
+    // 터치/드래그
+    track.addEventListener('pointerdown', function(e){
+      isDragging = true;
+      startX = e.clientX;
+      dragDelta = 0;
+      track.classList.add('grabbing');
+      track.setPointerCapture(e.pointerId);
+      clearInterval(autoTimer);
+    });
+
+    track.addEventListener('pointermove', function(e){
+      if(!isDragging) return;
+      dragDelta = e.clientX - startX;
+    });
+
+    track.addEventListener('pointerup', function(){
+      if(!isDragging) return;
+      isDragging = false;
+      track.classList.remove('grabbing');
+      if(dragDelta < -15) next();
+      else if(dragDelta > 15) prev();
+      stopAuto();
+    });
+
+    wrap.addEventListener('touchstart', function(e){
+      startX = e.touches[0].clientX;
+    }, {passive:true});
+
+    wrap.addEventListener('touchend', function(e){
+      const dx = e.changedTouches[0].clientX - startX;
+      if(dx < -15) next();
+      else if(dx > 15) prev();
+      stopAuto();
+    }, {passive:true});
+
+    goTo(0);
+
+    // 섹션이 화면에 들어올 때 자동 시작
+    const pathSection = track.closest('section');
+    const pathObserver = new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){
+        setTimeout(startAuto, 3000);
+        pathObserver.disconnect();
+      }
+    },{threshold:0.3});
+    pathObserver.observe(pathSection);
+  })();
+
+
+  const form = document.getElementById('applyForm');
+  const btn = document.getElementById('submitBtn');
+  const successBox = document.getElementById('successBox');
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+
+    const nameVal = document.getElementById('f-name').value.trim();
+    const phoneVal = document.getElementById('f-phone').value.trim();
+
+    if(!nameVal || !phoneVal){
+      alert('이름과 연락처는 필수입니다.');
+      return;
+    }
+
+    btn.textContent = '전송 중...';
+    btn.disabled = true;
+
+    const payload = {
+      applicant_name: nameVal,
+      applicant_phone: phoneVal,
+      applicant_age: document.getElementById('f-age').value.trim(),
+      applicant_message: document.getElementById('f-msg').value.trim(),
+      _subject: 'RYSM 팀 합류 지원서',
+    };
+
+    try {
+      const res = await fetch('https://formspree.io/f/xkolbzzp', {
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify(payload),
+      });
+      if(res.ok){
+        form.style.display = 'none';
+        successBox.classList.add('show');
+        window.scrollTo({top: applySection.offsetTop, behavior:'smooth'});
+      } else {
+        btn.textContent = '다시 시도해주세요';
+        btn.disabled = false;
+      }
+    } catch(err){
+      btn.textContent = '다시 시도해주세요';
+      btn.disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>
